@@ -1,0 +1,16 @@
+{
+    "scripts": {
+        "test": "php tests/_tools/composer-phpunit.php",
+        "test:filter": "php tests/_tools/composer-phpunit.php --filter",
+        "test:cover": "php tests/_tools/composer-phpunit.php --coverage-text --coverage-html tests/_reports/coverage"
+    },
+    "autoload": {
+        "psr-4":{
+            "Traits\\": "traits/",
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    }
+}

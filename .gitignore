@@ -1,0 +1,12 @@
+vendor
+tags
+.phpunit.*
+composer.lock
+.ctags
+tests/_reports
+env.php
+token
+*.csv
+*.md
+!README.md
+!CONTRIBUTING.md

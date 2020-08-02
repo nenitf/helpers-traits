@@ -22,6 +22,11 @@ curl https://raw.githubusercontent.com/nenitf/helpers-traits/main/traits/FileSys
 ```sh
 composer test
 composer test:cover
+
+# para testar a trait do curl é necessário levantar o servidor fake
+# em um segundo terminal ANTES da execução
+#composer test:start-server
+#composer test
 ```
 
 ## Contribuindo

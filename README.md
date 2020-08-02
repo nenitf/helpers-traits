@@ -27,3 +27,7 @@ composer test:cover
 ## Contribuindo
 
 Veja o [CONTRIBUTING.md](CONTRIBUTING.md)
+
+### Escopos dos commits
+
+- Podem ser obrigatórios para `:bug:`, `:new:`, `:100:` e `:cop:`, caso o commit seja específico de uma trait. Exemplo: `:new:(curl) add metodo post`.

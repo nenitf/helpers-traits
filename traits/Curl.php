@@ -3,7 +3,7 @@
 namespace Traits;
 
 trait Curl {
-    protected function get($endpoint, $options){
+    protected function get($endpoint, $options = null){
         return $this->curl($endpoint, 'get', $options);
     }
 
@@ -28,7 +28,7 @@ trait Curl {
         curl_close($curl);
 
         return [
-            'response' => json_decode($response, true),
+            'body' => json_decode($response, true),
             'info' => $requestInfo
         ];
     }

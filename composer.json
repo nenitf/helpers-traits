@@ -1,6 +1,7 @@
 {
     "scripts": {
         "test": "php tests/_tools/composer-phpunit.php",
+        "test:start-server": "php -S localhost:7845 -t tests/_tools/JsonServer",
         "test:filter": "php tests/_tools/composer-phpunit.php --filter",
         "test:cover": "php tests/_tools/composer-phpunit.php --coverage-text --coverage-html tests/_reports/coverage"
     },
@@ -9,6 +10,9 @@
             "Traits\\": "traits/",
             "Tests\\": "tests/"
         }
+    },
+    "config": {
+      "process-timeout": 0
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5"

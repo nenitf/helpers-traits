@@ -7,7 +7,25 @@ namespace Tests;
 
 /**
  * @coversDefaultClass \Traits\Curl
- * @covers ::__construct
  */
 class CurlTest extends \Tests\TestCase {
+    public function newCurl(){
+        return $this->newTrait('\Traits\Curl');
+    }
+
+    /**
+     * @dataProvider \Tests\DataProviders\Curl\Response::caminhosFelizes
+     * @covers ::curl
+     * @covers ::get
+     */
+    public function testDeveObterBody($method, $endpoint, $expectedResponse){
+        $client = $this->newCurl();
+        $response = $client->$method($endpoint, [
+            'nossl' => true
+        ]);
+        // var_dump($response['body']);die;
+        // var_dump($expectedResponse);die;
+
+        $this->assertEquals($expectedResponse, $response['body']);
+    }
 }

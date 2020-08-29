@@ -6,20 +6,20 @@ namespace Tests;
 // https://stackoverflow.com/a/46025984/9881278
 
 /**
- * @coversDefaultClass \Traits\Curl
+ * @coversDefaultClass \NativeProviders\HttpClientProvider
  */
-class CurlTest extends \Tests\TestCase {
-    public function newCurl(){
-        return $this->newTrait('\Traits\Curl');
+class HttpClientProviderTest extends \Tests\TestCase {
+    public function newHttpClient(){
+        return $this->new('\NativeProviders\HttpClientProvider');
     }
 
     /**
-     * @dataProvider \Tests\DataProviders\Curl\Response::caminhosFelizes
+     * @dataProvider \Tests\DataProviders\HttpClient\Response::caminhosFelizes
      * @covers ::curl
      * @covers ::get
      */
     public function testDeveObterBody($method, $endpoint, $expectedResponse){
-        $client = $this->newCurl();
+        $client = $this->newHttpClient();
         $response = $client->$method($endpoint, [
             'nossl' => true
         ]);

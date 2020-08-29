@@ -1,9 +1,9 @@
 <?php
 
-namespace Traits;
+namespace NativeProviders;
 
-trait Curl {
-    protected function get($endpoint, $options = null){
+class HttpClientProvider {
+    public function get($endpoint, $options = null){
         return $this->curl($endpoint, 'get', $options);
     }
 

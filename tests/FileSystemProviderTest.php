@@ -3,11 +3,11 @@
 namespace Tests;
 
 /**
- * @coversDefaultClass \Traits\FileSystem
+ * @coversDefaultClass \NativeProviders\FileSystemProvider
  */
-class FileSystemTest extends \Tests\TestCase {
+class FileSystemProviderTest extends \Tests\TestCase {
     public function newFileSystem(){
-        return $this->newTrait('\Traits\FileSystem');
+        return $this->new('\NativeProviders\FileSystemProvider');
     }
 
     /**

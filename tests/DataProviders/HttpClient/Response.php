@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\DataProviders\Curl;
+namespace Tests\DataProviders\HttpClient;
 
 class Response {
     protected $baseUrl = "http://localhost:7845";

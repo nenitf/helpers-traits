@@ -1,9 +1,9 @@
 <?php
 
-namespace Traits;
+namespace NativeProviders;
 
-trait Parser {
-    protected function parseCsvFile(string $filename, string $delimeter){
+class ParserProvider {
+    public function parseCsvFile(string $filename, string $delimeter){
         if(!is_readable($filename))
             throw new \Exception('Arquivo não encontrado');
 

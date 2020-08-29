@@ -23,11 +23,11 @@
     <!-- beStrictAboutCoversAnnotation="true" para marcar que todos testes sem @covers ou que cobrem trechos não especificados como risco -->
 
   <testsuite name="tests">
-      <directory>tests</directory>
+      <directory suffix="Test.php">tests</directory>
   </testsuite>
   <filter>
       <whitelist processUncoveredFilesFromWhitelist="true">
-          <directory suffix=".php">traits</directory>
+          <directory suffix=".php">src</directory>
       </whitelist>
   </filter>
 </phpunit>

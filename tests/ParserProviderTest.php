@@ -3,11 +3,11 @@
 namespace Tests;
 
 /**
- * @coversDefaultClass \Traits\Parser
+ * @coversDefaultClass \NativeProviders\ParserProvider
  */
-class ParserTest extends \Tests\TestCase {
+class ParserProviderTest extends \Tests\TestCase {
     public function newParser(){
-        return $this->newTrait('\Traits\Parser');
+        return $this->new('\NativeProviders\ParserProvider');
     }
 
     /**

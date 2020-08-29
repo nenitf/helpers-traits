@@ -4,6 +4,7 @@ tags
 composer.lock
 .ctags
 tests/_reports
+tests/*.txt
 env.php
 token
 *.csv
